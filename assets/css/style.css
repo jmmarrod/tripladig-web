@@ -494,6 +494,7 @@ section{ padding: var(--space-6) 0; }
 }
 .avatar-blue{ background: var(--color-blue-100); color: var(--color-blue-700); }
 .avatar-yellow{ background: var(--color-yellow-100); color: var(--color-yellow-600); }
+.avatar img{ width:100%; height:100%; object-fit:cover; border-radius:14px; }
 
 .person-name{ font-size:1.12rem; margin-bottom:.15em; }
 .person-role{ font-size:.88rem; color: var(--color-blue-700); font-weight:700; margin-bottom:.1em; }
