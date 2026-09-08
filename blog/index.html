@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog · TRIPLADIG</title>
+<meta name="description" content="Blog del proyecto TRIPLADIG: análisis y avances del equipo investigador sobre la tributación de las plataformas digitales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark">TD</span>
+      <span>
+        TRIPLADIG
+        <small>Tributación de Plataformas Digitales</small>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../investigacion.html">Investigación</a></li>
+        <li><a href="index.html" class="active">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="../actividades.html#congreso2026" class="btn btn-ghost btn-ghost-header">II Congreso 2026</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= INTRO ================= -->
+  <section class="page-intro">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Inicio</a> · Blog</div>
+      <div class="eyebrow">Blog</div>
+      <h1>Ideas y avances del equipo investigador</h1>
+      <p class="lede">
+        Análisis breves, escritos por los propios miembros de TRIPLADIG, sobre los problemas
+        tributarios que plantean las plataformas digitales — a menudo como adelanto de
+        investigaciones más extensas.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= LISTADO ================= -->
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+
+        <article class="blog-card is-featured">
+          <div class="featured-visual">"¿Erial fiscal u oportunidad para mejorar<br>el grado de conciencia cívico-tributaria?"</div>
+          <div>
+            <span class="featured-tag">Entrada inaugural del blog</span>
+            <span class="post-date">Fiscalidad indirecta · ITPAJD</span>
+            <h3>Plataformas digitales y tributación indirecta de las transmisiones de bienes por particulares</h3>
+            <p>
+              ¿Sabías que vender un mueble o una bicicleta de segunda mano por Wallapop puede
+              generar, formalmente, la obligación de liquidar el Impuesto sobre Transmisiones
+              Patrimoniales? Jesús Ramos Prieto inaugura el blog analizando por qué esta obligación
+              se cumple tan poco y qué alternativas se manejan para mejorarlo.
+            </p>
+            <div class="post-author">
+              <div class="avatar avatar-blue" style="width:2.2em;height:2.2em;font-size:.78rem">JR</div>
+              <span>Jesús Ramos Prieto · Catedrático de Derecho Financiero y Tributario</span>
+            </div>
+            <div class="hero-actions" style="margin-top: var(--space-2)">
+              <a href="plataformas-itpajd-transmisiones-particulares.html" class="btn btn-primary">Leer la entrada →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="note-card" style="margin-top: var(--space-4)">
+        Estamos preparando nuevas entradas a partir de los capítulos de la obra colectiva y de las
+        publicaciones más recientes del equipo. Vuelve pronto — o consulta mientras tanto los
+        <a href="../investigacion.html">resultados de investigación</a> completos.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" style="margin-bottom:.8em">
+          <span class="brand-mark">TD</span>
+          <span>TRIPLADIG</span>
+        </div>
+        <p>
+          Retos en la Tributación de las Plataformas Digitales. Proyecto de Generación del
+          Conocimiento financiado por el Ministerio de Ciencia e Innovación, con la Universidad
+          Pablo de Olavide de Sevilla como entidad solicitante.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="../quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="../actividades.html">Actividades</a></li>
+          <li><a href="../investigacion.html">Resultados de investigación</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:tripladig@upo.es">tripladig@upo.es</a></li>
+          <li>Facultad de Derecho<br>Universidad Pablo de Olavide, Sevilla</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Proyecto TRIPLADIG · PID2022-136767OA-I00</span>
+      <span class="funding-note">Financiado por el Ministerio de Ciencia e Innovación (AEI)</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(navToggle){
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+</script>
+
+</body>
+</html>
