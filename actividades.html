@@ -9,6 +9,52 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ---- II Congreso: sección autónoma ---- */
+    .cg-intro{ display:grid; grid-template-columns: minmax(0,1fr) 260px; gap: var(--space-5); align-items:start; margin-top: var(--space-3); }
+    .cg-intro .lede{ margin:0 0 var(--space-3); }
+    .cg-poster{ display:block; border-radius: var(--radius-sm); overflow:hidden; box-shadow: var(--shadow-md); border:1px solid var(--color-line); }
+    .cg-poster img{ display:block; width:100%; height:auto; }
+    .cg-stats{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: var(--space-2); margin: 0 0 var(--space-4); padding:0; list-style:none; }
+    .cg-stats li{ background: var(--color-paper); border:1px solid var(--color-line); border-radius: var(--radius-sm); padding: 1.1rem 1rem; }
+    .cg-stats strong{ display:block; font-family: var(--font-display); font-size: 2rem; line-height:1; color: var(--color-blue-700); margin-bottom:.35rem; }
+    .cg-stats span{ font-size:.92rem; color: var(--color-ink-soft); }
+    .cg-result{ background: var(--color-yellow-50); border:1px solid var(--color-yellow-100); border-left:4px solid var(--color-yellow-500); border-radius: var(--radius-sm); padding: 1.4rem 1.6rem; }
+    .cg-result h3{ font-size:1.15rem; margin:0 0 .5rem; }
+    .cg-result p{ margin:0 0 1.1rem; color: var(--color-ink); line-height:1.65; }
+    .cg-actions{ display:flex; flex-wrap:wrap; gap:.75rem; }
+    .cg-block{ margin-top: var(--space-6); }
+    .cg-block > h3{ font-size:1.5rem; margin:0 0 .4rem; }
+    .cg-block > .cg-sub{ color: var(--color-ink-soft); margin:0 0 var(--space-4); }
+    .cg-mesas{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-3); }
+    .cg-mesa{ background: var(--color-paper); border:1px solid var(--color-line); border-radius: var(--radius); padding: 1.8rem 1.9rem; box-shadow: var(--shadow-sm); }
+    .cg-when{ display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color: var(--color-blue-700); background: var(--color-blue-50); border-radius:999px; padding:.3rem .75rem; margin-bottom: .9rem; }
+    .cg-mesa h4{ font-family: var(--font-display); font-size:1.15rem; line-height:1.35; margin:0 0 .45rem; }
+    .cg-mod{ font-size:.9rem; color: var(--color-ink-soft); margin:0 0 1.2rem; padding-bottom:1.1rem; border-bottom:1px solid var(--color-line); }
+    .cg-mod b{ color: var(--color-ink); font-weight:600; }
+    .cg-talks{ list-style:none; margin:0; padding:0; display:grid; gap: 1.15rem; }
+    .cg-talks li{ display:grid; gap:.15rem; }
+    .cg-mesa:last-child:nth-child(odd){ grid-column: 1 / -1; }
+    .cg-mesa:last-child:nth-child(odd) .cg-talks{ grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: var(--space-5); }
+    .cg-who{ font-weight:700; color: var(--color-ink); }
+    .cg-aff{ font-weight:400; color: var(--color-ink-soft); font-size:.88rem; }
+    .cg-what{ color: var(--color-ink); font-size:.95rem; line-height:1.5; margin-top:.25rem; }
+    .cg-themes{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-4) var(--space-5); }
+    .cg-theme h4{ font-size:.82rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color: var(--color-blue-700); margin:0 0 1rem; padding-bottom:.6rem; border-bottom:2px solid var(--color-yellow-500); display:inline-block; }
+    .cg-theme ul{ list-style:none; margin:0; padding:0; display:grid; gap:1rem; }
+    .cg-theme li{ display:grid; gap:.2rem; }
+    .cg-theme .cg-what{ font-weight:600; }
+    .cg-foot{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-3); margin-top: var(--space-6); padding-top: var(--space-4); border-top:1px solid var(--color-line); font-size:.92rem; color: var(--color-ink-soft); }
+    .cg-foot h4{ font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; color: var(--color-ink); margin:0 0 .6rem; }
+    .cg-foot p{ margin:0 0 .5rem; line-height:1.6; }
+    @media (max-width: 900px){
+      .cg-intro{ grid-template-columns: 1fr; }
+      .cg-poster{ max-width:280px; }
+      .cg-mesas, .cg-themes, .cg-foot{ grid-template-columns: 1fr; }
+      .cg-mesa:last-child:nth-child(odd) .cg-talks{ grid-template-columns: 1fr; }
+      .cg-stats{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+  </style>
 </head>
 <body>
 
@@ -61,170 +107,129 @@
     <div class="container">
       <div class="section-head">
         <div class="head-text">
-          <div class="eyebrow">II Congreso · 29 y 30 de octubre de 2026</div>
+          <div class="eyebrow">II Congreso TRIPLADIG · 29 y 30 de octubre de 2026</div>
           <h2>Tributación de las plataformas digitales: despliegue regulatorio, impacto real y perspectivas de futuro</h2>
         </div>
       </div>
 
-      <div class="congreso-hero">
-        <a class="poster" href="assets/img/cartel-ii-congreso-tripladig.jpg" target="_blank" rel="noopener" aria-label="Ver el cartel del II Congreso TRIPLADIG a tamaño completo">
-          <img src="assets/img/cartel-ii-congreso-tripladig.jpg" width="1800" height="1273" loading="lazy"
-               alt="Cartel del II Congreso «Tributación de las plataformas digitales: despliegue regulatorio, impacto real y perspectivas de futuro». 29 y 30 de octubre de 2026, Universidad Pablo de Olavide, Salón de Grados, Edificio 7 «Pedro Rodríguez Campomanes». Directores: José Manuel Macarro Osuna y José Miguel Martín Rodríguez. Organizan: Área de Derecho Financiero y Tributario de la UPO, TRIPLADIG y AEDAF.">
-        </a>
-
-        <div class="congreso-info">
-          <p>
-            El II Congreso TRIPLADIG reunió en la Universidad Pablo de Olavide a especialistas de
-            universidades españolas y europeas, de la Agencia Tributaria y del asesoramiento fiscal
-            para revisar cómo se ha desplegado la regulación de la economía digital y qué retos
-            quedan abiertos. Lo organizamos con la Asociación Española de Asesores Fiscales.
+      <div class="cg-intro">
+        <div>
+          <p class="lede">
+            Dos jornadas en la Universidad Pablo de Olavide, organizadas con la Asociación Española de
+            Asesores Fiscales y dirigidas por José Manuel Macarro Osuna y José Miguel Martín Rodríguez.
+            Académicos, la Agencia Tributaria y el asesoramiento fiscal debatieron cómo se ha desplegado
+            la regulación de la economía digital y qué queda por resolver.
           </p>
-          <ul class="info-list">
-            <li><span class="info-k">Celebrado</span><span class="info-v">Jueves 29 y viernes 30 de octubre de 2026</span></li>
-            <li><span class="info-k">Lugar</span><span class="info-v">Salón de Grados, Edificio 7 «Pedro Rodríguez Campomanes». Universidad Pablo de Olavide, Sevilla</span></li>
-            <li><span class="info-k">Mesas</span><span class="info-v">5 mesas temáticas con 18 ponencias</span></li>
-            <li><span class="info-k">Comunicaciones</span><span class="info-v">13 seleccionadas, presenciales y en línea</span></li>
-            <li><span class="info-k">Directores</span><span class="info-v">José Manuel Macarro Osuna y José Miguel Martín Rodríguez</span></li>
-            <li><span class="info-k">Publicación</span><span class="info-v">Obra colectiva en preparación, con cierre previsto en febrero-marzo de 2027</span></li>
+          <ul class="cg-stats">
+            <li><strong>2</strong><span>jornadas</span></li>
+            <li><strong>5</strong><span>mesas temáticas</span></li>
+            <li><strong>18</strong><span>ponencias</span></li>
+            <li><strong>13</strong><span>comunicaciones</span></li>
           </ul>
-          <div class="info-actions">
-            <a href="investigacion.html#en-curso" class="btn btn-accent">Ver los trabajos en curso</a>
-            <a href="assets/docs/programa-ii-congreso-tripladig.pdf" target="_blank" rel="noopener" class="btn btn-outline">Descargar programa (PDF)</a>
+          <div class="cg-result">
+            <h3>Resultado: una obra colectiva</h3>
+            <p>
+              Las ponencias y las comunicaciones se publicarán como capítulos de un libro, junto con un
+              capítulo de cada miembro del equipo de investigación de la UPO. El cierre está previsto
+              para febrero-marzo de 2027.
+            </p>
+            <div class="cg-actions">
+              <a href="investigacion.html#en-curso" class="btn btn-primary">Ver los trabajos en curso</a>
+              <a href="assets/docs/programa-ii-congreso-tripladig.pdf" target="_blank" rel="noopener" class="btn btn-outline">Programa en PDF</a>
+            </div>
+          </div>
+        </div>
+        <a class="cg-poster" href="assets/img/cartel-ii-congreso-tripladig.jpg" target="_blank" rel="noopener" aria-label="Ver el cartel del II Congreso a tamaño completo">
+          <img src="assets/img/cartel-ii-congreso-tripladig.jpg" loading="lazy" alt="Cartel del II Congreso TRIPLADIG" onerror="this.parentNode.style.display='none'">
+        </a>
+      </div>
+
+      <div class="cg-block">
+        <h3>Las cinco mesas temáticas</h3>
+        <p class="cg-sub">Del nuevo orden fiscal global al impacto de la inteligencia artificial en la Administración tributaria.</p>
+        <div class="cg-mesas">
+          <article class="cg-mesa">
+            <span class="cg-when">Mesa 1 · Jueves 29, mañana</span>
+            <h4>Consolidación y desafíos del nuevo orden fiscal global</h4>
+            <p class="cg-mod">Presenta <b>José Manuel Macarro Osuna</b> · Universidad Pablo de Olavide</p>
+            <ul class="cg-talks">
+              <li><span class="cg-who">Félix Daniel Martínez Laguna</span><span class="cg-aff">Universidad Autónoma de Madrid</span><span class="cg-what">La tributación mínima internacional: un pilar a desnivel. Sobre competencia, cooperación y coerción</span></li><li><span class="cg-who">Jorge Sánchez Álvarez</span><span class="cg-aff">Montero Aramburu &amp; Gómez-Villares Atencia</span><span class="cg-what">Aplicación en España del Pilar 2: un reto operativo y jurídico</span></li><li><span class="cg-who">Ricardo García Antón</span><span class="cg-aff">Tilburg University</span><span class="cg-what">La resolución de controversias tributarias a nivel internacional: temas pendientes</span></li>
+            </ul>
+          </article>
+          <article class="cg-mesa">
+            <span class="cg-when">Mesa 2 · Jueves 29, mañana</span>
+            <h4>Alternativas a las propuestas de reconfiguración de la fiscalidad internacional</h4>
+            <p class="cg-mod">Presenta <b>Jesús Ramos Prieto</b> · Universidad Pablo de Olavide</p>
+            <ul class="cg-talks">
+              <li><span class="cg-who">Aitor Navarro Ibarrola</span><span class="cg-aff">Universidad Carlos III de Madrid</span><span class="cg-what">Gravamen en los Estados de mercado tras el fracaso de Pilar Uno</span></li><li><span class="cg-who">Betty Andrade Rodríguez</span><span class="cg-aff">Universidad Autónoma de Madrid</span><span class="cg-what">Tensiones Norte-Sur en el Protocolo Uno del Convenio Marco Tributario de la ONU: ¿hacia un sistema tributario justo?</span></li><li><span class="cg-who">Cristina García-Herrera Blanco</span><span class="cg-aff">Instituto de Estudios Fiscales</span><span class="cg-what">El paquete ómnibus de la UE</span></li>
+            </ul>
+          </article>
+          <article class="cg-mesa">
+            <span class="cg-when">Mesa 3 · Jueves 29, tarde</span>
+            <h4>Las plataformas digitales como elemento clave en el futuro del IVA</h4>
+            <p class="cg-mod">Presenta <b>Mónica Arribas León</b> · Universidad Pablo de Olavide</p>
+            <ul class="cg-talks">
+              <li><span class="cg-who">Marta Papis</span><span class="cg-aff">Universidad de Alicante</span><span class="cg-what">ViDA y plataformas digitales: ¿mismo servicio, mismo IVA? Neutralidad y proporcionalidad en el régimen del proveedor ficticio</span></li><li><span class="cg-who">Marcos Álvarez Suso</span><span class="cg-aff">Agencia Tributaria</span><span class="cg-what">La facturación electrónica y el reporte fiscal de datos en España. Situación actual y perspectivas de futuro</span></li><li><span class="cg-who">Giorgio Beretta</span><span class="cg-aff">University of Amsterdam</span><span class="cg-what">Digital Reporting and Single VAT Registration under ViDA: Towards a Truly Harmonised VAT Compliance Framework?</span></li><li><span class="cg-who">Carlos Gómez Barrero</span><span class="cg-aff">Garrigues</span><span class="cg-what">IVA y precios de transferencia a la luz de la reciente jurisprudencia del TJUE</span></li>
+            </ul>
+          </article>
+          <article class="cg-mesa">
+            <span class="cg-when">Mesa 4 · Jueves 29, tarde</span>
+            <h4>Externalidades y retos fiscales ante la economía digital consolidada</h4>
+            <p class="cg-mod">Presenta <b>María José Trigueros Martín</b> · Universidad Pablo de Olavide</p>
+            <ul class="cg-talks">
+              <li><span class="cg-who">Carmen Cámara Barroso</span><span class="cg-aff">Universidad a Distancia de Madrid</span><span class="cg-what">El mecanismo de ajuste en frontera por carbono (CBAM) y las plataformas digitales: retos regulatorios y perspectivas de futuro</span></li><li><span class="cg-who">Luis Toribio Bernárdez</span><span class="cg-aff">Universidad de Sevilla</span><span class="cg-what">Aspectos conflictivos en la fiscalidad de los nómadas digitales</span></li><li><span class="cg-who">Elizabeth Gil García</span><span class="cg-aff">Universidad de Alicante</span><span class="cg-what">¿Cuándo puede un teletrabajador de empresa extranjera convertirse en establecimiento permanente?</span></li><li><span class="cg-who">Benjamín Sevilla Bernabeu</span><span class="cg-aff">Universidad de Valencia</span><span class="cg-what">La propuesta de imposición mínima a los ultrarricos: límites y retos de implementación</span></li>
+            </ul>
+          </article>
+          <article class="cg-mesa">
+            <span class="cg-when">Mesa 5 · Viernes 30, mañana</span>
+            <h4>El impacto de la inteligencia artificial en la fiscalidad</h4>
+            <p class="cg-mod">Presenta <b>José Miguel Martín Rodríguez</b> · Universidad Pablo de Olavide</p>
+            <ul class="cg-talks">
+              <li><span class="cg-who">Jorge Martín López</span><span class="cg-aff">Universidad de Alicante</span><span class="cg-what">La utilización de la inteligencia artificial por la Agencia Tributaria: una visión panorámica</span></li><li><span class="cg-who">José Antonio Fernández Amor</span><span class="cg-aff">Universidad Autónoma de Barcelona</span><span class="cg-what">Seguridad jurídica, deber de información y asistencia e IA: de la traducción institucional al derecho al razonamiento humano</span></li><li><span class="cg-who">Bernardo Olivares Olivares</span><span class="cg-aff">Universidad Complutense de Madrid</span><span class="cg-what">¿Quién vigila al vigilante? Las herramientas de control y seguimiento al servicio de la AEAT</span></li><li><span class="cg-who">Marina Serrat Romaní</span><span class="cg-aff">Universitat de Barcelona</span><span class="cg-what">El internet de las cosas en el Derecho tributario como nueva frontera</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="cg-block">
+        <h3>Comunicaciones</h3>
+        <p class="cg-sub">Trece trabajos seleccionados, presentados el viernes 30 en una mesa conducida por Montserrat Hermosín Álvarez.</p>
+        <div class="cg-themes">
+          <div class="cg-theme">
+            <h4>Plataformas, IVA y Administración</h4>
+            <ul>
+              <li><span class="cg-what">La responsabilidad jurídica de las plataformas digitales en el cumplimiento de las obligaciones tributarias: entre la colaboración con la Administración y la protección de los derechos del contribuyente</span><span class="cg-aff">Mario Vélez Juela · Universidad de Sevilla</span></li><li><span class="cg-what">Las plataformas digitales y los nuevos paradigmas de la Administración tributaria: de la cooperación a la atribución de funciones fiscales</span><span class="cg-aff">José Eduardo de Paula Saran · Universidad de Valladolid</span></li><li><span class="cg-what">Fiscalidad indirecta y servicios de reparación en el entorno digital: el IVA como instrumento de la economía circular tras la Directiva 2022/542/UE</span><span class="cg-aff">Arantxa Serrano Cañadas · Universidad de Castilla-La Mancha</span></li><li><span class="cg-what">La tributación de las distintas modalidades de staking de criptoactivos</span><span class="cg-aff">Clara Colomer · Universidad Pablo de Olavide</span></li>
+            </ul>
+          </div>
+          <div class="cg-theme">
+            <h4>Información tributaria y control</h4>
+            <ul>
+              <li><span class="cg-what">DAC7: obligaciones del operador y garantías del contribuyente</span><span class="cg-aff">Valentina Passadore · Università di Ferrara</span></li><li><span class="cg-what">Datos de plataformas digitales y control tributario: entre el indicio de riesgo y la prueba del incumplimiento</span><span class="cg-aff">Mario García Bonilla · Universidad Autónoma de Madrid</span></li><li><span class="cg-what">¿Una digitalización a dos velocidades? VERI*FACTU ante el nuevo marco europeo de información tributaria</span><span class="cg-aff">Mónica Serra García · Universitat Jaume I</span></li>
+            </ul>
+          </div>
+          <div class="cg-theme">
+            <h4>Fiscalidad internacional</h4>
+            <ul>
+              <li><span class="cg-what">La presencia económica significativa colombiana. Una solución híbrida al problema del nexo para servicios digitales</span><span class="cg-aff">Andrés F. Perdomo Giorgi · Universidad Autónoma de Madrid</span></li><li><span class="cg-what">Función geoestratégica de los impuestos sobre servicios digitales</span><span class="cg-aff">Jaime Sesma Moreno · CUNEF Universidad</span></li><li><span class="cg-what">La legitimidad del Pilar Dos y las asimetrías del nuevo orden fiscal global: una perspectiva desde los países en vías de desarrollo</span><span class="cg-aff">M.ª Teresa Martínez-Escribano · Universidad Autónoma de Madrid</span></li><li><span class="cg-what">El Pilar Dos y las plataformas digitales</span><span class="cg-aff">Alessandro Casanova · Università di Ferrara</span></li>
+            </ul>
+          </div>
+          <div class="cg-theme">
+            <h4>Economía digital, territorio y medio ambiente</h4>
+            <ul>
+              <li><span class="cg-what">Externalidades medioambientales de los centros de datos: retos y propuestas desde la fiscalidad ambiental</span><span class="cg-aff">Iván Vega Pedreño · Universidad de Castilla-La Mancha</span></li><li><span class="cg-what">Incentivos fiscales al teletrabajo en zonas rurales: medidas tributarias para la fijación de población joven en un contexto de economía digital</span><span class="cg-aff">José Javier Sendín González · Universidad de Salamanca</span></li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Resultados -->
-      <div class="program" id="resultados">
-        <div class="program-head">
-          <div class="eyebrow">Resultados</div>
-          <h3>Del congreso a la obra colectiva</h3>
-        </div>
-        <p>
-          Las 18 ponencias y las 13 comunicaciones se publicarán como capítulos de una obra colectiva,
-          a la que se sumará un capítulo de cada miembro del equipo de investigación de la UPO. El
-          libro recogerá así los resultados de cierre del proyecto en todas sus líneas: el IVA de las
-          plataformas tras ViDA, las obligaciones de información y la DAC7, el nuevo orden fiscal
-          global tras los Pilares, los retos de la economía digital consolidada y el uso de la
-          inteligencia artificial por la Administración tributaria.
-        </p>
-      </div>
-
-      <!-- Programa -->
-      <div class="program" id="programa">
-        <div class="program-head">
-          <div class="eyebrow">Programa</div>
-          <h3>Cinco mesas temáticas y una mesa de comunicaciones</h3>
-          <nav class="program-jump" aria-label="Ir a la jornada">
-            <a href="#jueves">Jueves 29</a>
-            <a href="#viernes">Viernes 30</a>
-          </nav>
-        </div>
-
-        <div class="day" id="jueves">
-          <div class="day-head"><span class="day-dow">Jueves</span><span class="day-date">29 de octubre</span></div>
-          <div class="day-session-label">Sesión de mañana</div>
-          <div class="session session-mesa session-act">
-            <div class="session-time">09:15 – 09:30</div>
-            <div class="session-body">
-              <div class="session-kind">Inauguración</div>
-              <div class="pres"><span class="sp-name">César Hornero Méndez</span><span class="sp-role">Decano de la Facultad de Derecho de la Universidad Pablo de Olavide</span></div><div class="pres"><span class="sp-name">Jesús Ramos Prieto</span><span class="sp-role">Catedrático de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla. Miembro de AEDAF</span></div><div class="pres"><span class="sp-name">Gonzalo Gómez Acero</span><span class="sp-role">Bufete Gómez Martínez. Representante local del Grupo de Jóvenes de la Demarcación Territorial de AEDAF en Andalucía-Sevilla y Extremadura</span></div>
-            </div>
-          </div>
-          <div class="session session-mesa">
-            <div class="session-time">09:30 – 11:15</div>
-            <div class="session-body">
-              <div class="session-kind">Primera mesa temática</div>
-              <h4>Consolidación y desafíos del nuevo orden fiscal global</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">José Manuel Macarro Osuna</span><span class="sp-role">Codirector del congreso. Profesor Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla. Miembro de AEDAF</span></div>
-              <div class="sp-label">Ponentes</div><ul class="speakers"><li class="sp"><span class="sp-name">Félix Daniel Martínez Laguna</span><span class="sp-talk">“La tributación mínima internacional: un pilar a desnivel. Sobre competencia, cooperación y coerción”</span><span class="sp-role">Profesor Ayudante Doctor de Derecho Financiero y Tributario, Universidad Autónoma de Madrid. Miembro de AEDAF</span></li><li class="sp"><span class="sp-name">Jorge Sánchez Álvarez</span><span class="sp-talk">“Aplicación en España del Pilar 2: un reto operativo y jurídico”</span><span class="sp-role">Director del Área de Fiscalidad Internacional, Montero Aramburu &amp; Gómez-Villares Atencia. Miembro de AEDAF</span></li><li class="sp"><span class="sp-name">Ricardo García Antón</span><span class="sp-talk">“La resolución de controversias tributarias a nivel internacional: temas pendientes”</span><span class="sp-role">Assistant Professor of International and European Tax Law, Tilburg University</span></li></ul>
-            </div>
-          </div>
-          <div class="session session-break"><div class="session-time">11:15 – 11:45</div><div class="session-body">Pausa</div></div>
-          <div class="session session-mesa">
-            <div class="session-time">11:45 – 13:30</div>
-            <div class="session-body">
-              <div class="session-kind">Segunda mesa temática</div>
-              <h4>Alternativas a las propuestas de reconfiguración de la fiscalidad internacional</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">Jesús Ramos Prieto</span><span class="sp-role">Catedrático de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla. Miembro de AEDAF</span></div>
-              <div class="sp-label">Ponentes</div><ul class="speakers"><li class="sp"><span class="sp-name">Aitor Navarro Ibarrola</span><span class="sp-talk">“Gravamen en los Estados de mercado tras el fracaso de Pilar Uno”</span><span class="sp-role">Profesor Titular de Derecho Financiero y Tributario, Universidad Carlos III de Madrid</span></li><li class="sp"><span class="sp-name">Betty Andrade Rodríguez</span><span class="sp-talk">“Tensiones Norte-Sur en el Protocolo Uno del Convenio Marco Tributario de la ONU: ¿hacia un sistema tributario justo?”</span><span class="sp-role">Investigadora posdoctoral Tomás y Valiente, Universidad Autónoma de Madrid</span></li><li class="sp"><span class="sp-name">Cristina García-Herrera Blanco</span><span class="sp-talk">“El paquete ómnibus de la UE”</span><span class="sp-role">Directora de Estudios del Instituto de Estudios Fiscales. Profesora Titular de Derecho Financiero y Tributario, Universidad Complutense de Madrid</span></li></ul>
-            </div>
-          </div>
-          <div class="day-session-label">Sesión de tarde</div>
-          <div class="session session-mesa">
-            <div class="session-time">16:00 – 17:45</div>
-            <div class="session-body">
-              <div class="session-kind">Tercera mesa temática</div>
-              <h4>Las plataformas digitales como elemento clave en el futuro del IVA</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">Mónica Arribas León</span><span class="sp-role">Profesora Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla</span></div>
-              <div class="sp-label">Ponentes</div><ul class="speakers"><li class="sp"><span class="sp-name">Marta Papis</span><span class="sp-talk">“ViDA y plataformas digitales: ¿mismo servicio, mismo IVA? Neutralidad y proporcionalidad en el régimen del proveedor ficticio”</span><span class="sp-role">Profesora Ayudante Doctora, Universidad de Alicante</span></li><li class="sp"><span class="sp-name">Marcos Álvarez Suso</span><span class="sp-talk">“La facturación electrónica y el reporte fiscal de datos en España. Situación actual y perspectivas de futuro”</span><span class="sp-role">Jefe del Área de Apoyo Procesal, Departamento de Inspección, AEAT</span></li><li class="sp"><span class="sp-name">Giorgio Beretta</span><span class="sp-talk">“Digital Reporting and Single VAT Registration under ViDA: Towards a Truly Harmonised VAT Compliance Framework?”</span><span class="sp-role">Assistant Professor in Indirect Taxation, Amsterdam Centre for Tax Law, University of Amsterdam</span></li><li class="sp"><span class="sp-name">Carlos Gómez Barrero</span><span class="sp-talk">“IVA y precios de transferencia a la luz de la reciente jurisprudencia del TJUE”</span><span class="sp-role">Socio responsable del departamento de IVA, Garrigues. Miembro de AEDAF</span></li></ul>
-            </div>
-          </div>
-          <div class="session session-break"><div class="session-time">17:45 – 18:15</div><div class="session-body">Pausa</div></div>
-          <div class="session session-mesa">
-            <div class="session-time">18:15 – 20:00</div>
-            <div class="session-body">
-              <div class="session-kind">Cuarta mesa temática</div>
-              <h4>Externalidades y retos fiscales ante la economía digital consolidada</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">María José Trigueros Martín</span><span class="sp-role">Profesora Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla. Miembro de AEDAF</span></div>
-              <div class="sp-label">Ponentes</div><ul class="speakers"><li class="sp"><span class="sp-name">Carmen Cámara Barroso</span><span class="sp-talk">“El mecanismo de ajuste en frontera por carbono (CBAM) y las plataformas digitales: retos regulatorios y perspectivas de futuro”</span><span class="sp-role">Profesora Titular de Derecho Financiero y Tributario, Universidad a Distancia de Madrid</span></li><li class="sp"><span class="sp-name">Luis Toribio Bernárdez</span><span class="sp-talk">“Aspectos conflictivos en la fiscalidad de los nómadas digitales”</span><span class="sp-role">Profesor Titular de Derecho Financiero y Tributario, Universidad de Sevilla</span></li><li class="sp"><span class="sp-name">Elizabeth Gil García</span><span class="sp-talk">“¿Cuándo puede un teletrabajador de empresa extranjera convertirse en establecimiento permanente?”</span><span class="sp-role">Profesora Titular de Derecho Financiero y Tributario, Universidad de Alicante</span></li><li class="sp"><span class="sp-name">Benjamín Sevilla Bernabeu</span><span class="sp-talk">“La propuesta de imposición mínima a los ultrarricos: límites y retos de implementación”</span><span class="sp-role">Profesor Ayudante Doctor, Universidad de Valencia</span></li></ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="day" id="viernes">
-          <div class="day-head"><span class="day-dow">Viernes</span><span class="day-date">30 de octubre</span></div>
-          <div class="day-session-label">Sesión de mañana</div>
-          <div class="session session-mesa">
-            <div class="session-time">09:30 – 11:30</div>
-            <div class="session-body">
-              <div class="session-kind">Quinta mesa temática</div>
-              <h4>El impacto de la inteligencia artificial en la fiscalidad</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">José Miguel Martín Rodríguez</span><span class="sp-role">Codirector del congreso. Profesor Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla</span></div>
-              <div class="sp-label">Ponentes</div><ul class="speakers"><li class="sp"><span class="sp-name">Jorge Martín López</span><span class="sp-talk">“La utilización de la inteligencia artificial por la Agencia Tributaria: una visión panorámica”</span><span class="sp-role">Catedrático de Derecho Financiero y Tributario, Universidad de Alicante</span></li><li class="sp"><span class="sp-name">José Antonio Fernández Amor</span><span class="sp-talk">“Seguridad jurídica, deber de información y asistencia e IA: de la traducción institucional al derecho al razonamiento humano”</span><span class="sp-role">Catedrático de Derecho Financiero y Tributario, Universidad Autónoma de Barcelona</span></li><li class="sp"><span class="sp-name">Bernardo Olivares Olivares</span><span class="sp-talk">“¿Quién vigila al vigilante? Las herramientas de control y seguimiento al servicio de la AEAT”</span><span class="sp-role">Profesor Titular de Derecho Financiero y Tributario, Universidad Complutense de Madrid</span></li><li class="sp"><span class="sp-name">Marina Serrat Romaní</span><span class="sp-talk">“El internet de las cosas en el Derecho tributario como nueva frontera”</span><span class="sp-role">Profesora Lectora, Universitat de Barcelona</span></li></ul>
-            </div>
-          </div>
-          <div class="session session-break"><div class="session-time">11:30 – 12:00</div><div class="session-body">Pausa</div></div>
-          <div class="session session-mesa">
-            <div class="session-time">12:00 – 13:45</div>
-            <div class="session-body">
-              <div class="session-kind">Mesa de comunicaciones</div>
-              <h4>Comunicaciones seleccionadas</h4>
-              <div class="pres"><span class="pres-label">Presentación</span><span class="sp-name">Montserrat Hermosín Álvarez</span><span class="sp-role">Profesora Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla</span></div>
-              <div class="sp-label">Comunicantes</div><ul class="speakers"><li class="sp"><span class="sp-name">Mario Vélez Juela</span><span class="sp-talk">“La responsabilidad jurídica de las plataformas digitales en el cumplimiento de las obligaciones tributarias: entre la colaboración con la Administración y la protección de los derechos del contribuyente”</span><span class="sp-role">Universidad de Sevilla</span></li><li class="sp"><span class="sp-name">Arantxa Serrano Cañadas</span><span class="sp-talk">“Fiscalidad indirecta y servicios de reparación en el entorno digital: el IVA como instrumento de la economía circular tras la Directiva 2022/542/UE”</span><span class="sp-role">Universidad de Castilla-La Mancha</span></li><li class="sp"><span class="sp-name">Iván Vega Pedreño</span><span class="sp-talk">“Externalidades medioambientales de los centros de datos: retos y propuestas desde la fiscalidad ambiental”</span><span class="sp-role">Universidad de Castilla-La Mancha</span></li><li class="sp"><span class="sp-name">Andrés F. Perdomo Giorgi</span><span class="sp-talk">“La presencia económica significativa colombiana. Una solución híbrida al problema del nexo para servicios digitales”</span><span class="sp-role">Universidad Autónoma de Madrid</span></li><li class="sp"><span class="sp-name">Jaime Sesma Moreno</span><span class="sp-talk">“Función geoestratégica de los impuestos sobre servicios digitales”</span><span class="sp-role">CUNEF Universidad</span></li><li class="sp"><span class="sp-name">M.ª Teresa Martínez-Escribano</span><span class="sp-talk">“La legitimidad del Pilar Dos y las asimetrías del nuevo orden fiscal global: una perspectiva desde los países en vías de desarrollo”</span><span class="sp-role">Universidad Autónoma de Madrid</span></li><li class="sp"><span class="sp-name">Alessandro Casanova</span><span class="sp-talk">“El Pilar Dos y las plataformas digitales”</span><span class="sp-role">Università di Ferrara</span></li><li class="sp"><span class="sp-name">José Javier Sendín González</span><span class="sp-talk">“Incentivos fiscales al teletrabajo en zonas rurales: medidas tributarias para la fijación de población joven en un contexto de economía digital”</span><span class="sp-role">Universidad de Salamanca</span></li><li class="sp"><span class="sp-name">Clara Colomer</span><span class="sp-talk">“La tributación de las distintas modalidades de staking de criptoactivos”</span><span class="sp-role">Universidad Pablo de Olavide</span></li><li class="sp"><span class="sp-name">José Eduardo de Paula Saran</span><span class="sp-talk">“Las plataformas digitales y los nuevos paradigmas de la Administración tributaria: de la cooperación a la atribución de funciones fiscales”</span><span class="sp-role">Universidad de Valladolid</span></li><li class="sp"><span class="sp-name">Valentina Passadore</span><span class="sp-talk">“DAC7: obligaciones del operador y garantías del contribuyente”</span><span class="sp-role">Università di Ferrara</span></li><li class="sp"><span class="sp-name">Mario García Bonilla</span><span class="sp-talk">“Datos de plataformas digitales y control tributario: entre el indicio de riesgo y la prueba del incumplimiento”</span><span class="sp-role">Universidad Autónoma de Madrid</span></li><li class="sp"><span class="sp-name">Mónica Serra García</span><span class="sp-talk">“¿Una digitalización a dos velocidades? VERI*FACTU ante el nuevo marco europeo de información tributaria”</span><span class="sp-role">Universitat Jaume I</span></li></ul>
-            </div>
-          </div>
-          <div class="session session-mesa session-act">
-            <div class="session-time">13:45 – 14:00</div>
-            <div class="session-body">
-              <div class="session-kind">Clausura</div>
-              <div class="pres"><span class="sp-name">José Manuel Macarro Osuna</span><span class="sp-role">Codirector del congreso. Profesor Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla. Miembro de AEDAF</span></div><div class="pres"><span class="sp-name">José Miguel Martín Rodríguez</span><span class="sp-role">Codirector del congreso. Profesor Titular de Derecho Financiero y Tributario, Universidad Pablo de Olavide de Sevilla</span></div><div class="pres"><span class="sp-name">Francisco Adame Martínez</span><span class="sp-role">Catedrático de Derecho Financiero y Tributario, Universidad de Sevilla. Delegado del Gabinete de Estudios de la Demarcación Territorial de AEDAF en Andalucía-Sevilla y Extremadura</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="congreso-foot">
-        <div class="foot-card">
+      <div class="cg-foot">
+        <div>
           <h4>Comité científico</h4>
-          <ul class="plain-list">
-            <li><strong>Presidente:</strong> Javier Lasarte Álvarez (Catedrático Emérito, Universidad Pablo de Olavide)</li>
-            <li>Jesús Ramos Prieto, Catedrático, Universidad Pablo de Olavide. Miembro de AEDAF</li>
-            <li>Marco Greggi, Catedrático, Università di Ferrara</li>
-            <li>Mónica Arribas León, Profesora Titular, Universidad Pablo de Olavide</li>
-          </ul>
+          <p>Javier Lasarte Álvarez (presidente), Universidad Pablo de Olavide · Jesús Ramos Prieto, Universidad Pablo de Olavide · Marco Greggi, Università di Ferrara · Mónica Arribas León, Universidad Pablo de Olavide</p>
         </div>
-        <div class="foot-card">
-          <h4>Organizan</h4>
-          <ul class="plain-list">
-            <li>Área de Derecho Financiero y Tributario, Universidad Pablo de Olavide</li>
-            <li>Asociación Española de Asesores Fiscales (AEDAF)</li>
-          </ul>
-          <h4 style="margin-top:var(--space-3)">Con la financiación de</h4>
-          <ul class="plain-list">
-            <li>Proyecto PID2022-136767OA-I00 «Retos en la Tributación de las Plataformas Digitales» (TRIPLADIG), financiado por el Ministerio de Ciencia e Innovación, la Agencia Estatal de Investigación (AEI) y el Fondo Europeo de Desarrollo Regional (FEDER), convocatoria de 2022 de «Proyectos de I+D de Generación de Conocimiento»</li>
-            <li>Grupo PAIDI SEJ 369 «Estudios sobre derechos y garantías de los ciudadanos»</li>
-          </ul>
+        <div>
+          <h4>Organización y financiación</h4>
+          <p>Área de Derecho Financiero y Tributario de la Universidad Pablo de Olavide y AEDAF. Financiado por el proyecto PID2022-136767OA-I00 (MCIN/AEI/FEDER) y el Grupo PAIDI SEJ 369.</p>
         </div>
       </div>
     </div>
@@ -241,32 +246,6 @@
       </div>
 
       <div class="team-grid">
-
-        <article class="person-card">
-          <div class="person-head">
-            <div class="avatar avatar-yellow">26</div>
-            <div>
-              <h3 class="person-name" style="font-size:1.05rem">II Congreso Internacional "Tributación de las plataformas digitales: despliegue regulatorio, impacto real y perspectivas de futuro"</h3>
-              <div class="person-role">29–30 octubre 2026 · Universidad Pablo de Olavide</div>
-            </div>
-          </div>
-          <p class="person-summary">
-            El congreso de cierre, también con la AEDAF: cinco mesas temáticas, 18 ponencias y 13
-            comunicaciones sobre el nuevo orden fiscal global, el IVA de las plataformas, la economía
-            digital consolidada y la inteligencia artificial.
-          </p>
-          <details class="bio-toggle">
-            <summary>Leer más</summary>
-            <div class="bio-full">
-              <p>
-                Sus ponencias y comunicaciones, junto con un capítulo de cada miembro del equipo de
-                investigación de la UPO, formarán la segunda obra colectiva del proyecto, con cierre
-                previsto en febrero-marzo de 2027.
-              </p>
-              <p><a href="#congreso2026">Ver el programa completo</a></p>
-            </div>
-          </details>
-        </article>
 
         <article class="person-card">
           <div class="person-head">
